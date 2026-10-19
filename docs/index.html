@@ -6,8 +6,7 @@
 <title>XoDo — Windows 窗口透明度与图钉置顶工具</title>
 <meta name="description" content="XoDo 是常驻 Windows 系统托盘的原生窗口辅助工具：全局快捷键切换三档窗口透明度、切换窗口置顶，并以图钉标记被管理的窗口。单文件、免安装、零依赖。">
 <link rel="icon" href="assets/xodo.ico" type="image/x-icon">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
 <style>
 :root{
@@ -423,15 +422,15 @@ footer{border-top:1px solid var(--line);padding:38px 0 46px;margin-top:20px}
       <div class="tabs rv">
         <div class="tabstrip" role="tablist" aria-label="设置页签">
           <button class="tab" role="tab" id="t1" aria-selected="true"  aria-controls="p1">窗口透明度</button>
-          <button class="tab" role="tab" id="t2" aria-selected="false" aria-controls="p2">快捷键</button>
-          <button class="tab" role="tab" id="t3" aria-selected="false" aria-controls="p3">窗口置顶</button>
+          <button class="tab" role="tab" id="t2" aria-selected="false" aria-controls="p2">窗口置顶</button>
+          <button class="tab" role="tab" id="t3" aria-selected="false" aria-controls="p3">快捷键</button>          
           <button class="tab" role="tab" id="t4" aria-selected="false" aria-controls="p4">配置</button>
         </div>
 
         <div class="tabpane on" id="p1" role="tabpanel" aria-labelledby="t1">
           <figure class="shot">
             <img src="screenshots/transparency.jpg" alt="窗口透明度设置页：三组滑块与 alpha 数值">
-            <figcaption>screenshots/transparency.jpg · 窗口透明度页</figcaption>
+            <figcaption>XoDo · 窗口透明度页</figcaption>
           </figure>
           <div>
             <h3>三组滑块 = 三档快捷键</h3>
@@ -443,27 +442,11 @@ footer{border-top:1px solid var(--line);padding:38px 0 46px;margin-top:20px}
             </ul>
           </div>
         </div>
-
-        <div class="tabpane" id="p2" role="tabpanel" aria-labelledby="t2">
-          <figure class="shot">
-            <img src="screenshots/hotkeys.jpg" alt="快捷键设置页：五个组合键输入框">
-            <figcaption>screenshots/hotkeys.jpg · 快捷键页</figcaption>
-          </figure>
-          <div>
-            <h3>点输入框，直接按组合键</h3>
-            <ul>
-              <li>五项功能独立配置：<b>三档透明度、窗口置顶、显示设置界面</b>。</li>
-              <li>清空输入框即<b>禁用</b>该功能；“恢复默认快捷键”仅重置输入框，仍需保存生效。</li>
-              <li>保存时检查五项内部重复并尝试系统注册，失败则拒绝候选配置、保留原快捷键。</li>
-              <li>设置窗口处于前台时全局快捷键<b>暂时注销</b>，避免录键误触；测试前请先切回目标应用。</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="tabpane" id="p3" role="tabpanel" aria-labelledby="t3">
+        
+			<div class="tabpane" id="p2" role="tabpanel" aria-labelledby="t2">
           <figure class="shot">
             <img src="screenshots/pin-styles.jpg" alt="窗口置顶设置页：五种图钉样式单选">
-            <figcaption>screenshots/pin-styles.jpg · 窗口置顶页</figcaption>
+            <figcaption>XoDo · 窗口置顶页</figcaption>
           </figure>
           <div>
             <h3>选一枚喜欢的图钉</h3>
@@ -476,10 +459,26 @@ footer{border-top:1px solid var(--line);padding:38px 0 46px;margin-top:20px}
           </div>
         </div>
 
+        <div class="tabpane" id="p3" role="tabpanel" aria-labelledby="t3">
+          <figure class="shot">
+            <img src="screenshots/hotkeys.jpg" alt="快捷键设置页：五个组合键输入框">
+            <figcaption>XoDo · 快捷键页</figcaption>
+          </figure>
+          <div>
+            <h3>点输入框，直接按组合键</h3>
+            <ul>
+              <li>五项功能独立配置：<b>三档透明度、窗口置顶、显示设置界面</b>。</li>
+              <li>清空输入框即<b>禁用</b>该功能；“恢复默认快捷键”仅重置输入框，仍需保存生效。</li>
+              <li>保存时检查五项内部重复并尝试系统注册，失败则拒绝候选配置、保留原快捷键。</li>
+              <li>设置窗口处于前台时全局快捷键<b>暂时注销</b>，避免录键误触；测试前请先切回目标应用。</li>
+            </ul>
+          </div>
+        </div>
+        
         <div class="tabpane" id="p4" role="tabpanel" aria-labelledby="t4">
           <figure class="shot">
             <img src="screenshots/configuration.jpg" alt="配置页：开机启动与隐藏托盘图标复选框">
-            <figcaption>screenshots/configuration.jpg · 配置页</figcaption>
+            <figcaption>XoDo · 配置页</figcaption>
           </figure>
           <div>
             <h3>开机启动与托盘可见性</h3>
